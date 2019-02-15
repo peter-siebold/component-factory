@@ -1,7 +1,7 @@
 import React from "react";
 
-export default () => (
+export default props => (
     <div>
-        <span>Status Indicator</span>
+        <span>Status Indicator  for {props.dataSource}</span>
     </div>
 )

@@ -6,7 +6,7 @@ export const AppContext = React.createContext();
 
 export class AppProvider extends React.Component {
     state = {
-
+        currentDataSource: "data source 1",
     }
 
     render() {

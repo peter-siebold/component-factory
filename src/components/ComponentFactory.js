@@ -1,5 +1,6 @@
 import React, {Suspense} from "react";
-import ButtonControl from "./FormElements/ButtonControl"
+import ButtonControl from "./FormElements/ButtonControl";
+import {AppContext} from "../App/AppProvider"
 const LazyGaugeChart = React.lazy(() => import("./Charts/GaugeChart"));
 const LazySerialChart = React.lazy(() => import("./Charts/SerialChart"));
 const LazyStatusCard = React.lazy(() => import("./Widgets/StatusIndicator"));
@@ -10,24 +11,40 @@ const getComponent = (component, props) => {
         case "GaugeChart":
             return (
                 <Suspense fallback={<div>Loading...</div>}>
-                    <LazyGaugeChart />
+                    <AppContext.Consumer>
+                    {({currentDataSource}) => (
+                        <LazyGaugeChart dataSource={currentDataSource} />
+                    )}
+                    </AppContext.Consumer>
                 </Suspense>
              )
         case "StatusCard":
             return (
                 <Suspense fallback={<div>Loading...</div>}>
-                    <LazyStatusCard />
+                    <AppContext.Consumer>
+                    {({currentDataSource}) => (
+                        <LazyStatusCard  dataSource={currentDataSource} />
+                    )}
+                    </AppContext.Consumer>
                 </Suspense>
              )
         case "SerialChart":
             return (
                 <Suspense fallback={<div>Loading...</div>}>
-                    <LazySerialChart />
+                    <AppContext.Consumer>
+                    {({currentDataSource}) => (
+                        <LazySerialChart  dataSource={currentDataSource} />
+                    )}
+                    </AppContext.Consumer>
                 </Suspense>
              )
         case "Button":
             return (
-                <ButtonControl />
+                <AppContext.Consumer>
+                {({currentDataSource}) => (
+                    <ButtonControl  dataSource={currentDataSource} />
+                )}
+                </AppContext.Consumer>
              )
         default:
             return ( <div className="component-user">{component.ComponentType}</div>)

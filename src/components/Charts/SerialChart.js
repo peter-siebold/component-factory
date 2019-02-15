@@ -1,7 +1,7 @@
 import React from "react";
 
-export default () => (
+export default (props) => (
     <div>
-        <span>Serial Chart</span>
+        <span>Serial Chart  for {props.dataSource}</span>
     </div>
 )
