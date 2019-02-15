@@ -1,4 +1,189 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Overview
+
+Load Components for an application based on an externally provided app description
+Uses React Lazy / Suspend within a simple Factory to lazy load different components based on the given ComponentType.
+
+Example 1:
+
+```JSON
+{
+    "meta": {
+        "pageTitle": "Dashboard"
+    },
+    "id": "main_1",
+    "ComponentType": "main",
+    "props": {},
+    "children": [
+        {
+            "ComponentType": "GridContainer",
+            "id": "GridContainer_1",
+            "props": {},
+            "children": [
+                {
+                    "ComponentType": "GridItem",
+                    "id": "GridItem_1",
+                    "props": {
+                        "xs": 12,
+                        "md": 6,
+                        "spacing": 0
+                    },
+                    "children": [
+                        {
+                            "ComponentType": "GaugeChart",
+                            "id": "GaugeWidget_1",
+                            "props": { },
+                            "children": null
+                        }                
+                    ]
+                },
+                {
+                    "ComponentType": "GridItem",
+                    "id": "GridItem_2",
+                    "props": {
+                        "xs": 12,
+                        "md": 6,
+                        "spacing": 0
+                    },
+                    "children": [
+                        {
+                            "ComponentType": "GaugeChart",
+                            "id": "GaugeWidget_2",
+                            "props": { },
+                            "children": null
+                        }                
+                    ]
+                },
+                {
+                    "ComponentType": "GridItem",
+                    "id": "GridItem_3",
+                    "props": {
+                        "xs": 12,
+                        "md": 6,
+                        "spacing": 0
+                    },
+                    "children": [
+                        {
+                            "ComponentType": "StatusCard",
+                            "id": "StatusCard_1",
+                            "props": {  },
+                            "children": null
+                        }                
+                    ]
+                },
+                {
+                    "ComponentType": "GridItem",
+                    "id": "GridItem_4",
+                    "props": {
+                        "xs": 12,
+                        "md": 6,
+                        "spacing": 0
+                    },
+                    "children": [
+                        {
+                            "ComponentType": "SerialChart",
+                            "id": "QualityWidget_1",
+                            "props": { },
+                            "children": null
+                        }                
+                    ]
+                }
+            ]
+        }
+    ]
+}
+```
+
+Example 2:
+```JSON
+{
+        "meta": {
+            "pageTitle": "Dashboard"
+        },
+        "ComponentType": "main",
+        "id": "main_2",
+        "props": {},
+        "children": [
+            {
+                "ComponentType": "GridContainer",
+                "id": "GridContainer_2",
+                "props": {},
+                "children": [
+                    {
+                        "ComponentType": "GridItem",
+                        "id": "GridItem_5",
+                        "props": {
+                            "xs": 12,
+                            "md": 6,
+                            "spacing": 0
+                        },
+                        "children": [
+                            {
+                                "ComponentType": "StatusCard",
+                                "id": "Andon_card1",
+                                "props": { },
+                                "children": null
+                            }                
+                        ]
+                    },
+                    {
+                        "ComponentType": "GridItem",
+                        "id": "GridItem_6",
+                        "props": {
+                            "xs": 12,
+                            "md": 6,
+                            "spacing": 0
+                        },
+                        "children": [
+                            {
+                                "ComponentType": "StatusCard",
+                                "id": "StatusCard_2",
+                                "props": { },
+                                "children": null
+                            }                
+                        ]
+                    },
+                    {
+                        "ComponentType": "GridItem",
+                        "id": "GridItem_7",
+                        "props": {
+                            "xs": 12,
+                            "md": 6,
+                            "spacing": 0
+                        },
+                        "children": [
+                            {
+                                "ComponentType": "StatusCard",
+                                "id": "StatusCard134",
+                                "props": {  },
+                                "children": null
+                            }                
+                        ]
+                    },
+                    {
+                        "ComponentType": "GridItem",
+                        "id": "GridItem_8",
+                        "props": {
+                            "xs": 12,
+                            "md": 6,
+                            "spacing": 0
+                        },
+                        "children": [
+                            {
+                                "ComponentType": "Button",
+                                "id": "Button_1",
+                                "props": { },
+                                "children": null
+                            }                
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+```
+
+------
+
 
 ## Available Scripts
 
@@ -36,33 +221,3 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
