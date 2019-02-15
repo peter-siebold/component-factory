@@ -14,7 +14,7 @@ app.use('/', router);
 const pages = [
     {
         "meta": {
-            "pageTitle": "Dashboard"
+            "pageTitle": "Dashboard 1"
         },
         "id": "main_1",
         "ComponentType": "main",
@@ -123,7 +123,7 @@ const pages = [
     },
     {
         "meta": {
-            "pageTitle": "Dashboard"
+            "pageTitle": "Dashboard 2"
         },
         "ComponentType": "main",
         "id": "main_2",
