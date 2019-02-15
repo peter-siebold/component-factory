@@ -8,7 +8,7 @@ Example 1:
 ```JSON
 {
     "meta": {
-        "pageTitle": "Dashboard"
+        "pageTitle": "Dashboard 1"
     },
     "id": "main_1",
     "ComponentType": "main",
@@ -97,7 +97,7 @@ Example 2:
 ```JSON
 {
         "meta": {
-            "pageTitle": "Dashboard"
+            "pageTitle": "Dashboard 2"
         },
         "ComponentType": "main",
         "id": "main_2",
