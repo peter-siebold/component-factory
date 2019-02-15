@@ -3,7 +3,6 @@ import React from "react";
 
 export const AppContext = React.createContext();
 
-
 export class AppProvider extends React.Component {
     state = {
         currentDataSource: "",
@@ -17,7 +16,6 @@ export class AppProvider extends React.Component {
           components: appDescription.children,
           currentDataSource
         })
-        console.log("app desciption loaded, now invoke component factory to import all components for the page", appDescription)
       }
 
     render() {

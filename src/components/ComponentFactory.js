@@ -55,7 +55,6 @@ export const ComponentFactory = props => {
     const {component} = props;
     return (
         <div className="component">
-    
             { getComponent(component, props)}
             {
                 component.children && (
@@ -80,9 +79,7 @@ export const ComponentFactory = props => {
                 .component-content {
                     font-size: 0.9rem;
                 }
-    
                 .nested-components {
-                    
                     margin-top: 1em;
                     border-left: 1px solid white;
                     padding-left:1em;
