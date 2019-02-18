@@ -5,10 +5,8 @@ const router = express.Router();
 const port = 5005;
 
 
-// url: http://localhost:3000/
-// app.get('/', (request, response) => response.send('Hello World'));
- app.use(cors());
-// all routes prefixed with /api
+app.use(cors());
+
 app.use('/', router);
 
 const pages = [
@@ -41,7 +39,7 @@ const pages = [
                                     "dataSource": {
                                         "type" : "request",
                                         "source": "this.state.currentMachine.qualityUrl",
-                                        "url": "http://upiotstreams.westeurope.cloudapp.azure.com:8080/machine/STREAM_UP_IOT_PROD_QUALITY_MACHINE2"
+                                        "url": ""
                                     }
                                 },
                                 "children": null
@@ -64,7 +62,7 @@ const pages = [
                                     "dataSource": {
                                         "type" : "request",
                                         "source": "this.state.currentMachine.qualityUrl",
-                                        "url": "http://upiotstreams.westeurope.cloudapp.azure.com:8080/machine/STREAM_UP_IOT_PROD_QUALITY_MACHINE2"
+                                        "url": ""
                                     }
                                 },
                                 "children": null
@@ -87,7 +85,7 @@ const pages = [
                                     "dataSource": {
                                         "type" : "request",
                                         "source": "this.state.currentMachine.qualityUrl",
-                                        "url": "http://upiotstreams.westeurope.cloudapp.azure.com:8080/machine/STREAM_UP_IOT_PROD_QUALITY_MACHINE2"
+                                        "url": ""
                                     }
                                 },
                                 "children": null
@@ -110,7 +108,7 @@ const pages = [
                                     "dataSource": {
                                         "type" : "request",
                                         "source": "this.state.currentMachine.qualityUrl",
-                                        "url": "http://upiotstreams.westeurope.cloudapp.azure.com:8080/machine/STREAM_UP_IOT_PROD_QUALITY_MACHINE2"
+                                        "url": ""
                                     }
                                 },
                                 "children": null
@@ -150,7 +148,7 @@ const pages = [
                                     "dataSource": {
                                         "type" : "request",
                                         "source": "this.state.currentMachine.qualityUrl",
-                                        "url": "http://upiotstreams.westeurope.cloudapp.azure.com:8080/machine/STREAM_UP_IOT_PROD_QUALITY_MACHINE2"
+                                        "url": ""
                                     }
                                 },
                                 "children": null
@@ -173,7 +171,7 @@ const pages = [
                                     "dataSource": {
                                         "type" : "request",
                                         "source": "this.state.currentMachine.qualityUrl",
-                                        "url": "http://upiotstreams.westeurope.cloudapp.azure.com:8080/machine/STREAM_UP_IOT_PROD_QUALITY_MACHINE2"
+                                        "url": ""
                                     }
                                 },
                                 "children": null
@@ -196,7 +194,7 @@ const pages = [
                                     "dataSource": {
                                         "type" : "request",
                                         "source": "this.state.currentMachine.qualityUrl",
-                                        "url": "http://upiotstreams.westeurope.cloudapp.azure.com:8080/machine/STREAM_UP_IOT_PROD_QUALITY_MACHINE2"
+                                        "url": ""
                                     }
                                 },
                                 "children": null
@@ -219,7 +217,7 @@ const pages = [
                                     "dataSource": {
                                         "type" : "request",
                                         "source": "this.state.currentMachine.qualityUrl",
-                                        "url": "http://upiotstreams.westeurope.cloudapp.azure.com:8080/machine/STREAM_UP_IOT_PROD_QUALITY_MACHINE2"
+                                        "url": ""
                                     }
                                 },
                                 "children": null
