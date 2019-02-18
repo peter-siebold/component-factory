@@ -46,6 +46,16 @@ const getComponent = (component, props) => {
                 )}
                 </AppContext.Consumer>
              )
+        // case "LButton":
+        //     return (
+        //         <Suspense fallback={<div>Loading...</div>}>
+        //             <AppContext.Consumer>
+        //             {({currentDataSource}) => (
+        //                 <LazyButton dataSource={currentDataSource} />
+        //             )}
+        //             </AppContext.Consumer>
+        //         </Suspense>
+        //      )
         default:
             return ( <div className="component-user">{component.ComponentType}</div>)
 
@@ -70,6 +80,7 @@ export const ComponentFactory = props => {
             <style jsx="true">{`
                 .component {
                     margin-bottom: 1.5em;
+                    width: 100%;
                 }
                 .component-user {
                     font-size: 0.9rem;

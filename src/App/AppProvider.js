@@ -8,8 +8,13 @@ export class AppProvider extends React.Component {
         currentDataSource: "",
         components: [],
     }
+    setDataSource = dataSource => {
+        this.setState({
+            currentDataSource: dataSource
+        });
+    }
     async componentDidMount(){
-        const response = await fetch("http://localhost:5005/")
+        const response = await fetch("http://peters2:5005/")
         const appDescription = await response.json();
         const currentDataSource = appDescription.meta.pageTitle;
         this.setState({
