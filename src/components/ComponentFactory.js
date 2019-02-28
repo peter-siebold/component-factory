@@ -57,7 +57,7 @@ const getComponent = (component, props) => {
         //         </Suspense>
         //      )
         default:
-            return ( <div className="component-user">{component.ComponentType}</div>)
+            return ( <div className="component-type">{component.ComponentType}</div>)
 
     }
 }
@@ -82,7 +82,7 @@ export const ComponentFactory = props => {
                     margin-bottom: 1.5em;
                     width: 100%;
                 }
-                .component-user {
+                .component-type {
                     font-size: 0.9rem;
                     font-weight: bold;
                     margin-bottom: 0.5em;
